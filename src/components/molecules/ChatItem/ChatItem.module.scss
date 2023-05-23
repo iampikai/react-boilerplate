@@ -1,0 +1,34 @@
+.root {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #f1f3f6;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.titleContainer {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}

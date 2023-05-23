@@ -1,0 +1,80 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f3f6;
+  padding: 0 2rem;
+  flex: 1;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  min-height: 3rem;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.image {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+}
+
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.inputContainer {
+  position: sticky;
+  bottom: 0;
+  padding: 2rem 0;
+  display: flex;
+}
+
+.input {
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-color: black;
+  flex: 1;
+
+  &::placeholder {
+    font-weight: 600;
+  }
+}
+
+.messageItemRoot {
+  background-color: #027cd5;
+  width: 50%;
+  align-self: flex-end;
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: white;
+}
+
+.botMessageItemRoot {
+  @extend .messageItemRoot;
+  align-self: flex-start;
+  background-color: white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0.5rem;
+  color: black;
+}
+
+.noMessage {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}

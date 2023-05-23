@@ -1,0 +1,7 @@
+const ROUTE_CONSTANTS = {
+  BASE: '/',
+  PRIVATE_MODE_REDIRECT_TO: '/login',
+  RESTRICTED_MODE_REDIRECT_TO: '/home',
+};
+
+export default ROUTE_CONSTANTS;

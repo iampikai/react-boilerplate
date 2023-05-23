@@ -1,10 +1,10 @@
 import { Welcome } from '@pages';
 
-const routes = (isAuthed) => [
+const ROUTES = [
   {
-    path: '*',
+    path: '/',
     element: <Welcome />,
   },
 ];
 
-export default routes;
+export default ROUTES;

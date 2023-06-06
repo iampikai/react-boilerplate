@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
 
-import Constants from '@constants';
-import { useSelector } from 'react-redux';
+import RouteConstants from './routes.constants';
 
 const MODES = {
   RESTRICTED: 'RESTRICTED',
@@ -21,13 +21,12 @@ const RouteProtector = ({ children, mode }) => {
         ) : (
           <Navigate
             replace
-            state={{ path: pathname }}
-            to={Constants.ROUTES.PRIVATE_MODE_REDIRECT_TO}
+            to={`${RouteConstants.PRIVATE_MODE_REDIRECT_TO}?redirect=${pathname}`}
           />
         );
       case MODES.RESTRICTED:
         return isAuthed ? (
-          <Navigate replace to={Constants.ROUTES.RESTRICTED_MODE_REDIRECT_TO} />
+          <Navigate replace to={RouteConstants.RESTRICTED_MODE_REDIRECT_TO} />
         ) : (
           children
         );
